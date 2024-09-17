@@ -170,10 +170,15 @@
             event.preventDefault();
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
+            
+            console.log("Kullanıcı adı:", username);
+            console.log("Şifre:", password);
 
             if (users[username] && users[username] === password) {
+                console.log("Giriş başarılı, yönlendiriliyor...");
                 window.location.href = "https://www.basariuzem.com/online-ders";
             } else {
+                console.log("Kullanıcı adı veya şifre yanlış.");
                 alert('Kullanıcı adı veya şifre yanlış.');
             }
         });
